@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório RAR - Março e Abril 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8fafc;
+        }
+        h1, h2, h3, .font-poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+        .tab-active {
+            border-bottom: 3px solid #fbbf24;
+            color: #fbbf24;
+        }
+        .content-section {
+            display: none;
+        }
+        .content-section.active {
+            display: block;
+            animation: fadeIn 0.4s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .stat-card {
+            transition: transform 0.2s;
+        }
+        .stat-card:hover {
+            transform: translateY(-2px);
+        }
+        .sub-tab-btn {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Cabeçalho -->
+    <header class="bg-[#1e293b] text-white sticky top-0 z-50 shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20 overflow-x-auto">
+                <div class="flex-shrink-0 flex items-center gap-3 mr-8">
+                    <i class="fa-solid fa-chart-line text-yellow-400 text-2xl"></i>
+                    <span class="font-poppins font-bold text-lg tracking-tight uppercase whitespace-nowrap">Resultados RAR</span>
+                </div>
+                <nav class="flex space-x-2 md:space-x-6 h-full items-center text-xs font-semibold uppercase tracking-wider whitespace-nowrap">
+                    <button onclick="showSection('mova')" class="nav-btn tab-active px-2 py-7 transition-all" id="btn-mova">MOVA</button>
+                    <button onclick="showSection('nubank')" class="nav-btn px-2 py-7 transition-all" id="btn-nubank">Nubank</button>
+                    <button onclick="showSection('trescoracoes')" class="nav-btn px-2 py-7 transition-all" id="btn-trescoracoes">3 Corações</button>
+                    <button onclick="showSection('ortobom')" class="nav-btn px-2 py-7 transition-all" id="btn-ortobom">Ortobom</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        
+        <!-- SECÇÃO: MOVA -->
+        <section id="mova" class="content-section active">
+            <div class="bg-[#004080] text-white py-16">
+                <div class="max-w-7xl mx-auto px-4">
+                    <h2 class="text-4xl font-bold mb-2">MOVA</h2>
+                    <p class="text-blue-200">Resultados de Março e Abril 2026</p>
+                </div>
+            </div>
+
+            <!-- Sub-tabs MOVA -->
+            <div class="max-w-7xl mx-auto px-4 mt-6">
+                <div class="flex space-x-2 border-b border-gray-200">
+                    <button onclick="showSubSection('mova', 'mar')" id="btn-mova-mar" class="sub-tab-btn mova-tab py-2 px-6 font-bold text-sm rounded-t-lg bg-gray-200 text-gray-600 hover:bg-blue-100 hover:text-blue-800">
+                        Março
+                    </button>
+                    <button onclick="showSubSection('mova', 'abr')" id="btn-mova-abr" class="sub-tab-btn mova-tab py-2 px-6 font-bold text-sm rounded-t-lg bg-blue-600 text-white">
+                        Abril
+                    </button>
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 py-8 space-y-8">
+                
+                <!-- MOVA MARÇO CONTENT -->
+                <div id="mova-mar" class="sub-content hidden space-y-8">
+                    <div class="grid md:grid-cols-4 gap-6">
+                        <div class="bg-white p-5 rounded-2xl shadow-sm border-l-4 border-blue-600"><p class="text-xs text-gray-500 uppercase">Base Ativa</p><p class="text-2xl font-bold">584</p></div>
+                        <div class="bg-white p-5 rounded-2xl shadow-sm border-l-4 border-blue-400"><p class="text-xs text-gray-500 uppercase">Entradas no Mês</p><p class="text-2xl font-bold">28</p></div>
+                        <div class="bg-white p-5 rounded-2xl shadow-sm border-l-4 border-green-500"><p class="text-xs text-gray-500 uppercase">Encerrados</p><p class="text-2xl font-bold">5 <span class="text-xs text-green-600 font-normal ml-1">100% êxito</span></p></div>
+                        <div class="bg-white p-5 rounded-2xl shadow-sm border-l-4 border-orange-500"><p class="text-xs text-gray-500 uppercase">Audiências</p><p class="text-2xl font-bold">19 <span class="text-xs text-gray-500 font-normal ml-1">(1 int. / 18 corresp.)</span></p></div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Esferas e Distribuição -->
+                        <div class="bg-white p-6 rounded-2xl shadow-sm">
+                            <h3 class="font-bold text-lg mb-4 text-gray-800 border-b pb-2">Distribuição e Objetos (Março)</h3>
+                            <div class="grid grid-cols-2 gap-4 text-sm mb-4">
+                                <div>
+                                    <p class="text-gray-500 font-semibold mb-1">Esferas</p>
+                                    <ul><li>Vara Cível: 461</li><li>JEC: 110</li><li>Procon: 13</li></ul>
+                                </div>
+                                <div>
+                                    <p class="text-gray-500 font-semibold mb-1">Regiões</p>
+                                    <ul><li>Sudeste: 305</li><li>Nordeste: 106</li><li>Sul: 86</li><li>Centro-Oeste: 59</li><li>Norte: 28</li></ul>
+                                </div>
+                            </div>
+                            <p class="text-sm"><span class="font-bold text-gray-700">Maiores Objetos:</span> 136 juros abusivos, 117 negativação indevida, 76 superendividamento.</p>
+                            <p class="text-xs text-gray-400 mt-4 bg-gray-50 p-2 rounded">
+                                <strong>Detalhamento Base Ativa:</strong> 1 Acre, 15 Alagoas, 6 Amazonas, 39 Bahia, 10 Ceará, 9 DF, 9 Espírito Santo, 32 Goiás, 12 Maranhão, 11 Mato Grosso, 7 Mato Grosso do Sul, 39 Minas Gerais, 5 Pará, 4 Paraíba, 32 Paraná, 6 Pernambuco, 5 Piauí, 65 Rio de Janeiro, 8 Rio Grande do Norte, 41 Rio Grande do Sul, 5 Rondônia, 2 Roraima, 13 Santa Catarina, 192 São Paulo, 7 Sergipe e 9 Tocantins.
+                            </p>
+                        </div>
+
+                        <!-- Encerramentos e Decisões -->
+                        <div class="bg-white p-6 rounded-2xl shadow-sm">
+                            <h3 class="font-bold text-lg mb-4 text-gray-800 border-b pb-2">Desempenho e Decisões (Março)</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <p class="text-sm font-semibold text-gray-600">Detalhes dos 5 Encerrados:</p>
+                                    <ul class="text-sm text-gray-600 grid grid-cols-2 gap-x-2 mt-1">
+                                        <li>Extinto (sem res. mérito): 4</li><li>Improcedência: 1</li>
+                                    </ul>
+                                    <p class="text-xs text-blue-700 mt-1 bg-blue-50 p-1 rounded inline-block"><strong>Destaque:</strong> Improcedência para Gabriel (GHA).</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-gray-600">Decisões proferidas:</p>
+                                    <p class="text-sm text-gray-600"><strong>1º Grau (28):</strong> 9 sentenças de extinção, 8 improcedentes, 11 procedentes em parte.</p>
+                                    <p class="text-sm text-gray-600"><strong>2º Grau (12):</strong> 7 improcedentes, 5 procedentes.</p>
+                                </div>
+                                <div class="pt-2 border-t text-sm">
+                                    <p><strong>Entradas:</strong> 28 (SP 7, GO 4, RJ 3, RS 2, PR 2, PB 2, MG 2, MS 2, BA 2, MT 1, TO 1).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Produtividade -->
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-blue-500">
+                            <h3 class="font-bold text-lg mb-3 flex justify-between items-center text-gray-800">
+                                Equipe: Produtividade (Março)
+                                <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">Sustentações: 6 Despachos, 0 SO</span>
+                            </h3>
+                            <ul class="space-y-3 text-sm divide-y">
+                                <li class="pt-2"><strong>GHA (Gabriel):</strong> 49 compromissos. 32 prazos (1 def. adm., 3 embargos, 3 juntar proc., 6 manif., 3 recursos, 3 apelações, 9 contestações, 4 contrarrazões).</li>
+                                <li class="pt-2"><strong>JAJS (Jaqueline):</strong> 54 compromissos. 40 prazos (1 embargos, 3 juntar proc., 11 manif., 2 recursos, 3 apelações, 14 contestações, 5 contrarrazões e 1 pedido de SO).</li>
+                                <li class="pt-2"><strong>MBBE (Marina):</strong> 18 prazos.</li>
+                                <li class="pt-2"><strong>LMSI (Lorena):</strong> 11 prazos.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Relatórios -->
+                        <div class="bg-slate-50 p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between">
+                            <div>
+                                <h3 class="font-bold text-lg mb-3 text-gray-800">Relatórios e Reuniões (Março)</h3>
+                                <p class="text-sm font-bold text-blue-700 mb-2">Total de relatórios: 4</p>
+                                <ul class="text-sm text-gray-700 list-disc pl-5 space-y-1 mb-4">
+                                    <li>Planilha de demandas novas (segundas-feiras)</li>
+                                    <li>Planilha de Decisões Favoráveis (sextas-feiras)</li>
+                                    <li>Relatório de condenação e despesas processuais (1º dia útil)</li>
+                                    <li>Relatório de Encerramento (até dia 25 de cada mês)</li>
+                                </ul>
+                            </div>
+                            <div class="p-3 bg-white rounded border border-gray-200 text-sm text-gray-700 shadow-sm mt-4">
+                                <i class="fa-solid fa-users text-blue-500 mr-2"></i><strong>Reunião:</strong> Reunião de feedback realizada com o cliente.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MOVA ABRIL CONTENT -->
+                <div id="mova-abr" class="sub-content space-y-8">
+                    <div class="grid md:grid-cols-4 gap-6">
+                        <div class="bg-white p-5 rounded-2xl shadow-sm border-l-4 border-blue-600"><p class="text-xs text-gray-500 uppercase">Base Ativa</p><p class="text-2xl font-bold">584</p></div>
+                        <div class="bg-white p-5 rounded-2xl shadow-sm border-l-4 border-blue-400"><p class="text-xs text-gray-500 uppercase">Entradas no Mês</p><p class="text-2xl font-bold">32</p></div>
+                        <div class="bg-white p-5 rounded-2xl shadow-sm border-l-4 border-green-500"><p class="text-xs text-gray-500 uppercase">Encerrados</p><p class="text-2xl font-bold">20 <span class="text-xs text-green-600 font-normal ml-1">90% êxito</span></p></div>
+                        <div class="bg-white p-5 rounded-2xl shadow-sm border-l-4 border-orange-500"><p class="text-xs text-gray-500 uppercase">Audiências</p><p class="text-2xl font-bold">18 <span class="text-xs text-gray-500 font-normal ml-1">(2 int. / 16 corresp.)</span></p></div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Esferas e Distribuição -->
+                        <div class="bg-white p-6 rounded-2xl shadow-sm">
+                            <h3 class="font-bold text-lg mb-4 text-gray-800 border-b pb-2">Distribuição e Objetos (Abril)</h3>
+                            <div class="grid grid-cols-2 gap-4 text-sm mb-4">
+                                <div>
+                                    <p class="text-gray-500 font-semibold mb-1">Esferas</p>
+                                    <ul><li>Vara Cível: 461</li><li>JEC: 110</li><li>Procon: 13</li></ul>
+                                </div>
+                                <div>
+                                    <p class="text-gray-500 font-semibold mb-1">Regiões</p>
+                                    <ul><li>Sudeste: 305</li><li>Nordeste: 106</li><li>Sul: 86</li><li>Centro-Oeste: 59</li><li>Norte: 28</li></ul>
+                                </div>
+                            </div>
+                            <p class="text-sm"><span class="font-bold text-gray-700">Maiores Objetos:</span> 136 juros abusivos, 117 negativação indevida, 76 superendividamento.</p>
+                            <p class="text-xs text-gray-400 mt-4 bg-gray-50 p-2 rounded">
+                                <strong>Detalhamento Base Ativa:</strong> 1 Acre, 15 Alagoas, 6 Amazonas, 39 Bahia, 10 Ceará, 9 DF, 9 Espírito Santo, 32 Goiás, 12 Maranhão, 11 Mato Grosso, 7 Mato Grosso do Sul, 39 Minas Gerais, 5 Pará, 4 Paraíba, 32 Paraná, 6 Pernambuco, 5 Piauí, 65 Rio de Janeiro, 8 Rio Grande do Norte, 41 Rio Grande do Sul, 5 Rondônia, 2 Roraima, 13 Santa Catarina, 192 São Paulo, 7 Sergipe e 9 Tocantins.
+                            </p>
+                        </div>
+
+                        <!-- Encerramentos e Decisões -->
+                        <div class="bg-white p-6 rounded-2xl shadow-sm">
+                            <h3 class="font-bold text-lg mb-4 text-gray-800 border-b pb-2">Desempenho e Decisões (Abril)</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <p class="text-sm font-semibold text-gray-600">Detalhes dos 20 Encerrados (18 c/ êxito):</p>
+                                    <ul class="text-sm text-gray-600 grid grid-cols-2 gap-x-2 mt-1">
+                                        <li>Extinto (sem res. mérito): 9</li><li>Improcedente: 5</li>
+                                        <li>Procedente em parte: 2</li><li>Extinto - Acordo correu: 2</li>
+                                        <li>Desistência da ação: 2</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-gray-600">Decisões proferidas:</p>
+                                    <p class="text-sm text-gray-600"><strong>1º Grau (14):</strong> 6 improcedências, 3 extinções, 5 procedências.</p>
+                                    <p class="text-sm text-gray-600"><strong>2º Grau (7):</strong> 5 improcedências, 2 procedências.</p>
+                                </div>
+                                <div class="pt-2 border-t text-sm">
+                                    <p><strong>Entradas:</strong> 32 (SP 10, GO 6, RS 4, BA 4, AM 2, MG 2, PR 1, RJ 1, MS 1, AL 1).</p>
+                                </div>
+                                <div class="pt-2 border-t text-sm text-gray-600">
+                                    <p><strong>Prejuízo Processual:</strong> Perda de prazo recursal decorrente de falha na abertura de compromisso de parecer pela Controladoria, apesar de confirmação expressa ao advogado. A instabilidade no sistema Seven, somada à ausência de verificação cruzada, resultou no trânsito em julgado. O escritório assumiu o ressarcimento integral do valor da condenação a título de responsabilidade profissional.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Produtividade -->
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-blue-500">
+                            <h3 class="font-bold text-lg mb-3 flex justify-between items-center text-gray-800">
+                                Equipe: Produtividade (Abril)
+                                <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">Sustentações: 1 SO, 7 Despachos</span>
+                            </h3>
+                            <ul class="space-y-3 text-sm divide-y">
+                                <li class="pt-2"><strong>GHA (Gabriel):</strong> 38 compromissos. 26 prazos (3 manifestações, 3 agravos, 11 contestações, 2 juntar procuração, 2 contrarrazões, 3 defesas administrativas, 2 memoriais).</li>
+                                <li class="pt-2"><strong>JAJS (Jaqueline):</strong> 41 compromissos. 29 prazos (6 manifestações, 10 contestações, 6 juntar procuração, 2 contrarrazões, 1 defesa administrativa, 3 embargos, 1 memoriais).</li>
+                                <li class="pt-2"><strong>MBBE (Marina):</strong> 14 prazos.</li>
+                                <li class="pt-2"><strong>LMSI (Lorena):</strong> 13 prazos.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Relatórios -->
+                        <div class="bg-slate-50 p-6 rounded-2xl shadow-sm border border-slate-200">
+                            <h3 class="font-bold text-lg mb-3 text-gray-800">Relatórios do Cliente (Abril)</h3>
+                            <p class="text-sm font-bold text-blue-700 mb-2">Total de relatórios: 5</p>
+                            <ul class="text-sm text-gray-700 list-disc pl-5 space-y-1 mb-4">
+                                <li>Planilha de demandas novas (segundas-feiras)</li>
+                                <li>Planilha de Decisões Favoráveis (sextas-feiras)</li>
+                                <li>Relatório de condenação e despesas processuais (1º dia útil)</li>
+                                <li>Relatório de Encerramento (até dia 25 de cada mês)</li>
+                            </ul>
+                            <div class="p-3 bg-white rounded border border-yellow-200 text-xs text-gray-700 shadow-sm">
+                                <strong>Extraordinário:</strong> Solicitação para levantamento da base para verificação de oportunidades de juntada de Termo de Endosso (fase de instrução), com foco no saneamento processual e reforço da estratégia defensiva.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CENÁRIO DA EQUIPE (GERAL CONTA) -->
+                <div class="bg-slate-50 p-4 rounded-xl flex flex-wrap gap-x-6 gap-y-3 text-sm text-gray-600 border border-slate-200 mt-4">
+                    <p><i class="fa-solid fa-user-check text-green-500 mr-2"></i><strong>Turnover:</strong> Não houve.</p>
+                    <p><i class="fa-solid fa-calendar-check text-green-500 mr-2"></i><strong>Pendências de Pauta:</strong> Não há.</p>
+                    <p><i class="fa-solid fa-graduation-cap text-blue-500 mr-2"></i><strong>Treinamento de Novatos:</strong> N/A.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECÇÃO: NUBANK -->
+        <section id="nubank" class="content-section">
+            <div class="bg-[#581c87] text-white py-16">
+                <div class="max-w-7xl mx-auto px-4">
+                    <h2 class="text-4xl font-bold mb-2">Nubank Estratégico</h2>
+                    <p class="text-purple-200">Resultados de Março e Abril 2026</p>
+                </div>
+            </div>
+
+            <!-- Sub-tabs Nubank -->
+            <div class="max-w-7xl mx-auto px-4 mt-6">
+                <div class="flex space-x-2 border-b border-gray-200">
+                    <button onclick="showSubSection('nubank', 'mar')" id="btn-nubank-mar" class="sub-tab-btn nubank-tab py-2 px-6 font-bold text-sm rounded-t-lg bg-gray-200 text-gray-600 hover:bg-purple-100 hover:text-purple-800">
+                        Março
+                    </button>
+                    <button onclick="showSubSection('nubank', 'abr')" id="btn-nubank-abr" class="sub-tab-btn nubank-tab py-2 px-6 font-bold text-sm rounded-t-lg bg-purple-600 text-white">
+                        Abril
+                    </button>
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 py-8 space-y-8">
+                
+                <div class="bg-white rounded-2xl shadow-sm p-6 mb-8 flex flex-col md:flex-row justify-between items-center border-l-4 border-purple-600 gap-4">
+                    <div>
+                        <p class="text-sm text-gray-500 uppercase font-bold">Base Ativa</p>
+                        <p class="text-4xl font-bold text-gray-800">210 <span class="text-sm text-gray-400 font-normal">processos totais</span></p>
+                        <p class="text-xs text-gray-500 mt-2"><strong>Distribuição Regional:</strong> Nordeste: 123, Sudeste: 59, Norte: 28.</p>
+                        <p class="text-xs text-gray-500"><strong>Maiores objetos:</strong> Customer Security, Investimentos e Fraud.</p>
+                    </div>
+                    <div class="text-xs text-gray-400 max-w-sm bg-gray-50 p-3 rounded">
+                        2 Acre, 4 Alagoas, 5 Amazonas, 41 Bahia, 17 Ceará, 5 Espírito Santo, 9 Maranhão, 12 Minas Gerais, 16 Pará, 8 Paraíba, 22 Pernambuco, 9 Piauí, 15 Rio de Janeiro, 9 Rio Grande do Norte, 1 Rondônia, 4 Sergipe, 27 São Paulo, 4 Tocantins.
+                    </div>
+                </div>
+
+                <!-- NUBANK MARÇO CONTENT -->
+                <div id="nubank-mar" class="sub-content hidden space-y-8">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-purple-100">
+                        <h3 class="font-bold text-lg mb-4 text-gray-800">Dados Operacionais - Março</h3>
+                        <div class="grid grid-cols-2 gap-4 text-sm mb-4">
+                            <div class="bg-purple-50 p-3 rounded text-center"><p class="text-xs uppercase text-gray-500">Entradas</p><p class="text-xl font-bold text-purple-700">14</p></div>
+                            <div class="bg-green-50 p-3 rounded text-center"><p class="text-xs uppercase text-gray-500">Encerrados</p><p class="text-xl font-bold text-green-700">1 (Fav.)</p></div>
+                        </div>
+                        <div class="space-y-3 text-sm text-gray-600">
+                            <p><strong>Origem Entradas:</strong> SP 6, BA 2, AC 1, AM 1, CE 1, MG 1, RJ 1, SE 1.</p>
+                            <p><strong>Decisões (1º Grau):</strong> 7 decisões (2 extinção, 2 imp., 3 proc.).</p>
+                            <p><strong>Decisões (2º Grau):</strong> 6 decisões (3 fav., 3 desfav.).</p>
+                            <p><strong>Sustentação:</strong> 2 SO e 1 despacho.</p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-100 text-sm">
+                            <p class="font-bold text-gray-800 mb-2">Produtividade da Equipe:</p>
+                            <p><strong>GHA:</strong> 16 comp. | 38 prazos (22 cont., 2 proc., 2 emb., 1 manif., 9 contrar., 1 imp., 1 contraminuta).</p>
+                            <p><strong>MBBE:</strong> 32 prazos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NUBANK ABRIL CONTENT -->
+                <div id="nubank-abr" class="sub-content space-y-8">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-purple-100">
+                        <h3 class="font-bold text-lg mb-4 text-gray-800">Dados Operacionais - Abril</h3>
+                        <div class="grid grid-cols-2 gap-4 text-sm mb-4">
+                            <div class="bg-purple-50 p-3 rounded text-center"><p class="text-xs uppercase text-gray-500">Entradas</p><p class="text-xl font-bold text-purple-700">11</p></div>
+                            <div class="bg-gray-100 p-3 rounded text-center"><p class="text-xs uppercase text-gray-500">Encerrados</p><p class="text-xl font-bold text-gray-700">4 <span class="text-[10px] font-normal block">(1 fav, 3 desfav)</span></p></div>
+                        </div>
+                        <div class="space-y-3 text-sm text-gray-600">
+                            <p><strong>Origem Entradas:</strong> BA 5, SP 3, MG 2, ES 1.</p>
+                            <p><strong>Decisões (1º Grau):</strong> 1 decisão de improcedência.</p>
+                            <p><strong>Decisões (2º Grau):</strong> 1 decisão de procedência.</p>
+                            <p><strong>Sustentação:</strong> 1 SO e 3 despachos.</p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-100 text-sm">
+                            <p class="font-bold text-gray-800 mb-2">Produtividade da Equipe:</p>
+                            <p><strong>GHA:</strong> 34 comp. | 28 prazos (15 cont., 2 juntar proc., 5 manif., 6 contrarrazões).</p>
+                            <p><strong>MBBE:</strong> 19 prazos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CENÁRIO DA EQUIPE & EXTRAS -->
+                <div class="bg-slate-50 p-4 rounded-xl flex flex-wrap gap-x-6 gap-y-3 text-sm text-gray-600 border border-slate-200 mt-8">
+                    <p><i class="fa-solid fa-ban text-gray-400 mr-2"></i><strong>Acordos no Bimestre:</strong> Não houve.</p>
+                    <p><i class="fa-solid fa-video-slash text-gray-400 mr-2"></i><strong>Reunião/Relatórios/Audiências:</strong> N/A.</p>
+                    <div class="w-full h-px bg-gray-200 my-1"></div>
+                    <p><i class="fa-solid fa-user-check text-green-500 mr-2"></i><strong>Turnover:</strong> Não houve.</p>
+                    <p><i class="fa-solid fa-calendar-check text-green-500 mr-2"></i><strong>Pendências de Pauta:</strong> Não há.</p>
+                    <p><i class="fa-solid fa-graduation-cap text-blue-500 mr-2"></i><strong>Treinamento:</strong> N/A.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECÇÃO: 3 CORAÇÕES -->
+        <section id="trescoracoes" class="content-section">
+            <div class="bg-[#7f1d1d] text-white py-16">
+                <div class="max-w-7xl mx-auto px-4">
+                    <h2 class="text-4xl font-bold mb-2">3 Corações</h2>
+                    <p class="text-red-200">Resultados de Março e Abril 2026</p>
+                </div>
+            </div>
+
+            <!-- Sub-tabs 3 Corações -->
+            <div class="max-w-7xl mx-auto px-4 mt-6">
+                <div class="flex space-x-2 border-b border-gray-200">
+                    <button onclick="showSubSection('trescoracoes', 'mar')" id="btn-trescoracoes-mar" class="sub-tab-btn trescoracoes-tab py-2 px-6 font-bold text-sm rounded-t-lg bg-gray-200 text-gray-600 hover:bg-red-100 hover:text-red-800">
+                        Março
+                    </button>
+                    <button onclick="showSubSection('trescoracoes', 'abr')" id="btn-trescoracoes-abr" class="sub-tab-btn trescoracoes-tab py-2 px-6 font-bold text-sm rounded-t-lg bg-red-600 text-white">
+                        Abril
+                    </button>
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 py-8 space-y-8">
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-red-600 md:col-span-2">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-gray-500 text-sm font-bold uppercase mb-1">Base Ativa Total</h3>
+                                <p class="text-4xl font-bold text-gray-800">79</p>
+                            </div>
+                            <div class="text-right text-sm">
+                                <p class="font-bold text-gray-700">Esferas</p>
+                                <p class="text-gray-500">JEC: 50 | Vara Cível: 29</p>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 text-sm mt-4 pt-4 border-t border-gray-100">
+                            <div>
+                                <p class="font-semibold text-gray-700">Maiores Objetos:</p>
+                                <ul class="list-disc pl-4 text-gray-600">
+                                    <li>Defeito no produto (29)</li>
+                                    <li>Golpe do Instagram (6)</li>
+                                    <li>Atraso na Entrega (6)</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-700">Regiões:</p>
+                                <p class="text-gray-600">Nordeste 25, Sudeste 28, Sul 15, Norte 7, CO 4.</p>
+                            </div>
+                        </div>
+                        <div class="mt-4 bg-gray-50 p-2 text-xs text-gray-400 rounded">
+                            (1 Alagoas, 7 Amazonas, 13 Bahia, 2 Ceará, 1 DF, 2 Espírito Santo, 3 Maranhão, 1 Mato Grosso, 2 Mato Grosso do Sul, 8 Minas Gerais, 3 Paraíba, 2 Paraná, 1 Pernambuco, 9 Rio de Janeiro, 1 Rio Grande do Norte, 10 RS, 3 Santa Catarina, 9 São Paulo, 1 Sergipe).
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 space-y-4">
+                        <div class="bg-green-50 p-4 rounded-xl text-center border border-green-100">
+                            <p class="text-xs uppercase font-bold text-green-700 mb-1">Aptos para Arquivamento</p>
+                            <p class="text-2xl font-bold text-green-800">05</p>
+                            <p class="text-[10px] text-green-600 mt-1 leading-tight">Estão na esteira de encerramento, não contabilizados na baixa principal (Corte Abril).</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-xl text-center border border-blue-100">
+                            <p class="text-xs uppercase font-bold text-blue-700 mb-1">Audiências Realizadas</p>
+                            <p class="text-2xl font-bold text-blue-800">5</p>
+                            <p class="text-[10px] text-blue-600 mt-1">(Março: 2 int, 1 corr. | Abril: 1 int, 1 corr.)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3 CORAÇÕES MARÇO CONTENT -->
+                <div id="trescoracoes-mar" class="sub-content hidden space-y-8">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white p-6 rounded-2xl shadow-sm relative">
+                            <h3 class="font-bold text-lg mb-4 text-gray-800">Desempenho - Março</h3>
+                            <ul class="space-y-3 text-sm text-gray-600">
+                                <li><strong>Entradas:</strong> Não houve entradas.</li>
+                                <li><strong>Encerrados:</strong> Não houve.</li>
+                                <li><strong>Decisões:</strong> 2 decisões (1 sentença extinção, 1 acórdão desfavorável).</li>
+                                <li><strong>Prejuízos Processuais:</strong> Não houve.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm relative border border-gray-100">
+                            <h3 class="font-bold text-lg mb-4 text-gray-800">Operação da Equipe - Março</h3>
+                            <div class="space-y-4">
+                                <div class="text-sm">
+                                    <p class="font-bold text-gray-700 border-b pb-1 mb-2">Produtividade</p>
+                                    <p><strong>GIAB (Giovanna):</strong> 30 compromissos, 2 prazos (2 contestações).</p>
+                                    <p class="mt-2 text-gray-500 text-xs">Estagiário de suporte: Leonardo Ferreira (LJF)</p>
+                                </div>
+                                <div class="text-sm">
+                                    <p class="font-bold text-gray-700 border-b pb-1 mb-2">Relacionamento e Relatórios</p>
+                                    <p><strong>Reunião:</strong> Cancelada pelo cliente.</p>
+                                    <p><strong>Relatórios Mensais (2):</strong> Planilha de atualização sistêmica e Planilha de Pauta de Audiências.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3 CORAÇÕES ABRIL CONTENT -->
+                <div id="trescoracoes-abr" class="sub-content space-y-8">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white p-6 rounded-2xl shadow-sm relative">
+                            <h3 class="font-bold text-lg mb-4 text-gray-800">Desempenho - Abril</h3>
+                            <ul class="space-y-3 text-sm text-gray-600">
+                                <li><strong>Entradas:</strong> Não houve entradas.</li>
+                                <li><strong>Encerrados:</strong> Não houve (além dos 5 aptos informados na visão geral).</li>
+                                <li><strong>Decisões:</strong> Não houve.</li>
+                                <li><strong>Prejuízos Processuais:</strong> Não houve.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm relative border border-gray-100">
+                            <h3 class="font-bold text-lg mb-4 text-gray-800">Operação da Equipe - Abril</h3>
+                            <div class="space-y-4">
+                                <div class="text-sm">
+                                    <p class="font-bold text-gray-700 border-b pb-1 mb-2">Produtividade</p>
+                                    <p><strong>GIAB (Giovanna):</strong> 48 compromissos, 2 prazos (2 contestações).</p>
+                                    <p class="mt-2 text-gray-500 text-xs">Estagiário de suporte: Leonardo Ferreira (LJF)</p>
+                                </div>
+                                <div class="text-sm">
+                                    <p class="font-bold text-gray-700 border-b pb-1 mb-2">Relacionamento e Relatórios</p>
+                                    <p><strong>Reunião:</strong> Não houve.</p>
+                                    <p><strong>Relatórios Mensais (2):</strong> Planilha de atualização sistêmica e Planilha de Pauta de Audiências.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CENÁRIO DA EQUIPE (GERAL CONTA) -->
+                <div class="bg-slate-50 p-4 rounded-xl flex flex-wrap gap-x-6 gap-y-3 text-sm text-gray-600 border border-slate-200 mt-4">
+                    <p><i class="fa-solid fa-user-check text-green-500 mr-2"></i><strong>Turnover:</strong> Não houve.</p>
+                    <p><i class="fa-solid fa-calendar-check text-green-500 mr-2"></i><strong>Pendências de Pauta:</strong> Não há.</p>
+                    <p><i class="fa-solid fa-graduation-cap text-blue-500 mr-2"></i><strong>Treinamento de Novatos:</strong> N/A.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECÇÃO: ORTOBOM -->
+        <section id="ortobom" class="content-section">
+            <div class="bg-[#0369a1] text-white py-16">
+                <div class="max-w-7xl mx-auto px-4">
+                    <h2 class="text-4xl font-bold mb-2">Ortobom</h2>
+                    <p class="text-sky-200">Resultados de Março e Abril 2026</p>
+                </div>
+            </div>
+
+            <!-- Sub-tabs Ortobom -->
+            <div class="max-w-7xl mx-auto px-4 mt-6">
+                <div class="flex space-x-2 border-b border-gray-200">
+                    <button onclick="showSubSection('ortobom', 'mar')" id="btn-ortobom-mar" class="sub-tab-btn ortobom-tab py-2 px-6 font-bold text-sm rounded-t-lg bg-gray-200 text-gray-600 hover:bg-sky-100 hover:text-sky-800">
+                        Março
+                    </button>
+                    <button onclick="showSubSection('ortobom', 'abr')" id="btn-ortobom-abr" class="sub-tab-btn ortobom-tab py-2 px-6 font-bold text-sm rounded-t-lg bg-sky-600 text-white">
+                        Abril
+                    </button>
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 py-8 space-y-8">
+                
+                <!-- ALERTA CRÍTICO DE NEGÓCIO -->
+                <div class="bg-red-50 border-l-4 border-red-600 p-4 rounded shadow-sm flex items-start gap-4">
+                    <i class="fa-solid fa-triangle-exclamation text-red-600 text-2xl mt-1"></i>
+                    <div>
+                        <h3 class="font-bold text-red-800">Notificação Crítica de Conta (Abril)</h3>
+                        <p class="text-sm text-red-700 mt-1"><strong>O cliente anunciou a rescisão com o escritório no final de abril.</strong> Adicionalmente, em abril houve ocorrência de revelia em razão de falha da área técnica ao não encaminhar o processo para cadastro (Ciência tardia. Acordo formalizado).</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="bg-white p-5 rounded-2xl shadow-sm border-b-4 border-sky-600 text-center"><p class="text-xs text-gray-500 uppercase">Base Ativa</p><p class="text-3xl font-bold mt-1 text-sky-800">130</p></div>
+                    <div class="bg-white p-5 rounded-2xl shadow-sm border-b-4 border-amber-500 text-center"><p class="text-xs text-gray-500 uppercase">Entradas (Bimestre)</p><p class="text-3xl font-bold mt-1 text-amber-600">27</p><p class="text-[10px] text-gray-400 mt-1">10 Mar | 17 Abr</p></div>
+                    <div class="bg-white p-5 rounded-2xl shadow-sm border-b-4 border-green-500 text-center"><p class="text-xs text-gray-500 uppercase">Encerrados (Bimestre)</p><p class="text-3xl font-bold mt-1 text-green-600">11</p><p class="text-[10px] text-gray-400 mt-1">10 Mar | 1 Abr</p></div>
+                    <div class="bg-white p-5 rounded-2xl shadow-sm border-b-4 border-purple-500 text-center"><p class="text-xs text-gray-500 uppercase">Audiências</p><p class="text-3xl font-bold mt-1 text-purple-600">14</p><p class="text-[10px] text-gray-400 mt-1">12 Mar | 2 Abr</p></div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Base Detalhes -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 md:col-span-3">
+                        <h3 class="font-bold text-gray-800 mb-3 border-b pb-2">Panorama da Base</h3>
+                        <div class="text-sm space-y-3 grid md:grid-cols-3 gap-4">
+                            <div>
+                                <p><strong>Esferas:</strong> Procon (57), JEC (40), Vara Cível (33).</p>
+                            </div>
+                            <div>
+                                <p><strong>Regiões:</strong> Nordeste 129, Sul 1.</p>
+                            </div>
+                            <div>
+                                <p><strong>Objetos:</strong> Defeito no produto, Golpe do Instagram e Atraso na Entrega.</p>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 p-3 rounded text-xs text-gray-500 mt-4 border border-gray-100">
+                            <strong>Totalidade:</strong> 11 Alagoas, 1 Bahia, 17 Paraíba, 98 Pernambuco, 1 Piauí, 1 Rio Grande do Sul, 1 Sergipe.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ORTOBOM MARÇO CONTENT -->
+                <div id="ortobom-mar" class="sub-content hidden space-y-8">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                        <h3 class="font-bold text-sky-700 mb-3 border-b pb-2">Resumo Operacional - Março</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                            <div>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li><strong>Entradas:</strong> 10 (8 PE, 1 AL, 1 PI).</li>
+                                    <li><strong>Encerrados:</strong> 10 (4 fav, 6 acordos pré-sentença).</li>
+                                    <li><strong>Decisões (8):</strong> 4 proc., 3 hom. acordo, 1 ext.</li>
+                                    <li><strong>Relatórios:</strong> Pauta de Audiências, Base Ativa + <em>Relatório Extraordinário (Shopping Recife)</em>.</li>
+                                    <li><strong>Acordos:</strong> Recebidos 4 casos (1 form. pós-sentença).</li>
+                                </ul>
+                            </div>
+                            <div class="bg-sky-50 p-4 rounded">
+                                <p class="font-bold text-gray-800 mb-2">Produtividade da Equipe</p>
+                                <p><strong>GIAB (Giovanna):</strong> 35 comp. | 10 prazos (2 cont., 1 proc., 4 def. adm., 3 manif.)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ORTOBOM ABRIL CONTENT -->
+                <div id="ortobom-abr" class="sub-content space-y-8">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                        <h3 class="font-bold text-sky-700 mb-3 border-b pb-2">Resumo Operacional - Abril</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                            <div>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li><strong>Entradas:</strong> 17 (15 PE, 1 AL, 1 PB).</li>
+                                    <li><strong>Encerrados:</strong> 1 (favorável).</li>
+                                    <li><strong>Decisões:</strong> Não houve.</li>
+                                    <li><strong>Relatórios:</strong> Pauta de Audiências, Base Ativa.</li>
+                                    <li><strong>Acordos:</strong> Recebidos 4 casos (1 form. pós-sentença).</li>
+                                </ul>
+                            </div>
+                            <div class="bg-sky-50 p-4 rounded">
+                                <p class="font-bold text-gray-800 mb-2">Produtividade da Equipe</p>
+                                <p class="mb-2"><strong>GIAB (Giovanna):</strong> 35 comp. | 17 prazos (4 cont., 5 proc., 7 def. adm., 1 manif.)</p>
+                                <p><strong>LJF (Leonardo):</strong> 5 compromissos | 8 prazos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CENÁRIO DA EQUIPE (GERAL CONTA) -->
+                <div class="bg-slate-50 p-4 rounded-xl flex flex-wrap gap-x-6 gap-y-3 text-sm text-gray-600 border border-slate-200 mt-4">
+                    <p><i class="fa-solid fa-user-check text-green-500 mr-2"></i><strong>Turnover:</strong> Não houve.</p>
+                    <p><i class="fa-solid fa-calendar-check text-green-500 mr-2"></i><strong>Pendências de Pauta:</strong> Não há.</p>
+                    <p><i class="fa-solid fa-graduation-cap text-blue-500 mr-2"></i><strong>Treinamento de Novatos:</strong> N/A.</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 py-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-gray-400 text-xs">
+            <p>&copy; 2026 - Relatório de Resultados RAR</p>
+            <p class="mt-2 md:mt-0 font-bold tracking-widest text-gray-500">CONFIDENCIAL</p>
+        </div>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Esconde todas as seções principais
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Mostra a seção desejada
+            const target = document.getElementById(sectionId);
+            if (target) {
+                target.classList.add('active');
+            }
+
+            // Atualiza os estilos das abas de navegação no cabeçalho
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('tab-active');
+            });
+            const activeBtn = document.getElementById('btn-' + sectionId);
+            if (activeBtn) {
+                activeBtn.classList.add('tab-active');
+            }
+
+            // Rola suavemente para o topo ao trocar de cliente
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Função para alternar as sub-abas dos meses (Março/Abril)
+        function showSubSection(clientId, month) {
+            // Esconde todas as sub-seções do cliente
+            document.querySelectorAll(`#${clientId} .sub-content`).forEach(el => {
+                el.classList.add('hidden');
+            });
+            
+            // Remove estilos ativos de todos os botões de meses desse cliente
+            document.querySelectorAll(`.${clientId}-tab`).forEach(btn => {
+                btn.classList.remove('bg-blue-600', 'bg-purple-600', 'bg-red-600', 'bg-sky-600', 'text-white');
+                btn.classList.add('bg-gray-200', 'text-gray-600');
+            });
+
+            // Mostra a sub-seção do mês escolhido
+            const target = document.getElementById(`${clientId}-${month}`);
+            if (target) {
+                target.classList.remove('hidden');
+            }
+
+            // Adiciona a cor correta ao botão ativo baseada na paleta do cliente
+            const activeBtn = document.getElementById(`btn-${clientId}-${month}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-gray-200', 'text-gray-600');
+                if (clientId === 'mova') activeBtn.classList.add('bg-blue-600', 'text-white');
+                if (clientId === 'nubank') activeBtn.classList.add('bg-purple-600', 'text-white');
+                if (clientId === 'trescoracoes') activeBtn.classList.add('bg-red-600', 'text-white');
+                if (clientId === 'ortobom') activeBtn.classList.add('bg-sky-600', 'text-white');
+            }
+        }
+    </script>
+</body>
+</html>
