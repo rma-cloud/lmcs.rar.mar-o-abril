@@ -32,12 +32,6 @@
             from { opacity: 0; transform: translateY(8px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        .stat-card {
-            transition: transform 0.2s;
-        }
-        .stat-card:hover {
-            transform: translateY(-2px);
-        }
         .sub-tab-btn {
             transition: all 0.3s ease;
         }
@@ -58,6 +52,7 @@
                     <button onclick="showSection('nubank')" class="nav-btn px-2 py-7 transition-all" id="btn-nubank">Nubank</button>
                     <button onclick="showSection('trescoracoes')" class="nav-btn px-2 py-7 transition-all" id="btn-trescoracoes">3 Corações</button>
                     <button onclick="showSection('ortobom')" class="nav-btn px-2 py-7 transition-all" id="btn-ortobom">Ortobom</button>
+                    <button onclick="showSection('equipe')" class="nav-btn px-2 py-7 transition-all text-yellow-300" id="btn-equipe">Equipe (Produtividade)</button>
                 </nav>
             </div>
         </div>
@@ -91,7 +86,7 @@
                 <!-- MOVA MARÇO CONTENT -->
                 <div id="mova-mar" class="sub-content hidden space-y-8">
                     <div class="grid md:grid-cols-4 gap-6">
-                        <div class="bg-white p-5 rounded-2xl shadow-sm border-l-4 border-blue-600"><p class="text-xs text-gray-500 uppercase">Base Ativa</p><p class="text-2xl font-bold">584</p></div>
+                        <div class="bg-white p-5 rounded-2xl shadow-sm border-l-4 border-blue-600"><p class="text-xs text-gray-500 uppercase">Base Ativa</p><p class="text-2xl font-bold">552</p></div>
                         <div class="bg-white p-5 rounded-2xl shadow-sm border-l-4 border-blue-400"><p class="text-xs text-gray-500 uppercase">Entradas no Mês</p><p class="text-2xl font-bold">28</p></div>
                         <div class="bg-white p-5 rounded-2xl shadow-sm border-l-4 border-green-500"><p class="text-xs text-gray-500 uppercase">Encerrados</p><p class="text-2xl font-bold">5 <span class="text-xs text-green-600 font-normal ml-1">100% êxito</span></p></div>
                         <div class="bg-white p-5 rounded-2xl shadow-sm border-l-4 border-orange-500"><p class="text-xs text-gray-500 uppercase">Audiências</p><p class="text-2xl font-bold">19 <span class="text-xs text-gray-500 font-normal ml-1">(1 int. / 18 corresp.)</span></p></div>
@@ -104,16 +99,16 @@
                             <div class="grid grid-cols-2 gap-4 text-sm mb-4">
                                 <div>
                                     <p class="text-gray-500 font-semibold mb-1">Esferas</p>
-                                    <ul><li>Vara Cível: 461</li><li>JEC: 110</li><li>Procon: 13</li></ul>
+                                    <ul><li>Vara Cível: 445</li><li>JEC: 95</li><li>Procon: 12</li></ul>
                                 </div>
                                 <div>
                                     <p class="text-gray-500 font-semibold mb-1">Regiões</p>
-                                    <ul><li>Sudeste: 305</li><li>Nordeste: 106</li><li>Sul: 86</li><li>Centro-Oeste: 59</li><li>Norte: 28</li></ul>
+                                    <ul><li>Sudeste: 292</li><li>Nordeste: 101</li><li>Sul: 81</li><li>Centro-Oeste: 52</li><li>Norte: 26</li></ul>
                                 </div>
                             </div>
-                            <p class="text-sm"><span class="font-bold text-gray-700">Maiores Objetos:</span> 136 juros abusivos, 117 negativação indevida, 76 superendividamento.</p>
+                            <p class="text-sm"><span class="font-bold text-gray-700">Maiores Objetos:</span> Juros abusivos, Negativação indevida, Superendividamento.</p>
                             <p class="text-xs text-gray-400 mt-4 bg-gray-50 p-2 rounded">
-                                <strong>Detalhamento Base Ativa:</strong> 1 Acre, 15 Alagoas, 6 Amazonas, 39 Bahia, 10 Ceará, 9 DF, 9 Espírito Santo, 32 Goiás, 12 Maranhão, 11 Mato Grosso, 7 Mato Grosso do Sul, 39 Minas Gerais, 5 Pará, 4 Paraíba, 32 Paraná, 6 Pernambuco, 5 Piauí, 65 Rio de Janeiro, 8 Rio Grande do Norte, 41 Rio Grande do Sul, 5 Rondônia, 2 Roraima, 13 Santa Catarina, 192 São Paulo, 7 Sergipe e 9 Tocantins.
+                                <strong>Detalhamento Base Ativa:</strong> 1 Acre, 14 Alagoas, 4 Amazonas, 35 Bahia, 10 Ceará, 9 DF, 9 Espírito Santo, 26 Goiás, 12 Maranhão, 11 Mato Grosso, 6 Mato Grosso do Sul, 37 Minas Gerais, 5 Pará, 4 Paraíba, 31 Paraná, 6 Pernambuco, 5 Piauí, 64 Rio de Janeiro, 8 Rio Grande do Norte, 37 Rio Grande do Sul, 5 Rondônia, 2 Roraima, 13 Santa Catarina, 182 São Paulo, 7 Sergipe e 9 Tocantins.
                             </p>
                         </div>
 
@@ -144,8 +139,8 @@
                         <!-- Produtividade -->
                         <div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-blue-500">
                             <h3 class="font-bold text-lg mb-3 flex justify-between items-center text-gray-800">
-                                Equipe: Produtividade (Março)
-                                <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">Sustentações: 6 Despachos, 0 SO</span>
+                                Produtividade no Cliente (Março)
+                                <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">6 Despachos, 0 SO</span>
                             </h3>
                             <ul class="space-y-3 text-sm divide-y">
                                 <li class="pt-2"><strong>GHA (Gabriel):</strong> 49 compromissos. 32 prazos (1 def. adm., 3 embargos, 3 juntar proc., 6 manif., 3 recursos, 3 apelações, 9 contestações, 4 contrarrazões).</li>
@@ -197,7 +192,7 @@
                                     <ul><li>Sudeste: 305</li><li>Nordeste: 106</li><li>Sul: 86</li><li>Centro-Oeste: 59</li><li>Norte: 28</li></ul>
                                 </div>
                             </div>
-                            <p class="text-sm"><span class="font-bold text-gray-700">Maiores Objetos:</span> 136 juros abusivos, 117 negativação indevida, 76 superendividamento.</p>
+                            <p class="text-sm"><span class="font-bold text-gray-700">Maiores Objetos:</span> Juros abusivos, Negativação indevida, Superendividamento.</p>
                             <p class="text-xs text-gray-400 mt-4 bg-gray-50 p-2 rounded">
                                 <strong>Detalhamento Base Ativa:</strong> 1 Acre, 15 Alagoas, 6 Amazonas, 39 Bahia, 10 Ceará, 9 DF, 9 Espírito Santo, 32 Goiás, 12 Maranhão, 11 Mato Grosso, 7 Mato Grosso do Sul, 39 Minas Gerais, 5 Pará, 4 Paraíba, 32 Paraná, 6 Pernambuco, 5 Piauí, 65 Rio de Janeiro, 8 Rio Grande do Norte, 41 Rio Grande do Sul, 5 Rondônia, 2 Roraima, 13 Santa Catarina, 192 São Paulo, 7 Sergipe e 9 Tocantins.
                             </p>
@@ -223,8 +218,8 @@
                                 <div class="pt-2 border-t text-sm">
                                     <p><strong>Entradas:</strong> 32 (SP 10, GO 6, RS 4, BA 4, AM 2, MG 2, PR 1, RJ 1, MS 1, AL 1).</p>
                                 </div>
-                                <div class="pt-2 border-t text-sm text-gray-600">
-                                    <p><strong>Prejuízo Processual:</strong> Perda de prazo recursal decorrente de falha na abertura de compromisso de parecer pela Controladoria, apesar de confirmação expressa ao advogado. A instabilidade no sistema Seven, somada à ausência de verificação cruzada, resultou no trânsito em julgado. O escritório assumiu o ressarcimento integral do valor da condenação a título de responsabilidade profissional.</p>
+                                <div class="pt-2 border-t text-sm text-red-700 font-semibold bg-red-50 p-2 rounded">
+                                    <p><strong>Prejuízo Processual:</strong> Perda de prazo recursal decorrente de falha na abertura de compromisso de parecer pela Controladoria. Escritório assumiu o ressarcimento integral do valor da condenação (responsabilidade profissional).</p>
                                 </div>
                             </div>
                         </div>
@@ -234,8 +229,8 @@
                         <!-- Produtividade -->
                         <div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-blue-500">
                             <h3 class="font-bold text-lg mb-3 flex justify-between items-center text-gray-800">
-                                Equipe: Produtividade (Abril)
-                                <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">Sustentações: 1 SO, 7 Despachos</span>
+                                Produtividade no Cliente (Abril)
+                                <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">1 SO, 7 Despachos</span>
                             </h3>
                             <ul class="space-y-3 text-sm divide-y">
                                 <li class="pt-2"><strong>GHA (Gabriel):</strong> 38 compromissos. 26 prazos (3 manifestações, 3 agravos, 11 contestações, 2 juntar procuração, 2 contrarrazões, 3 defesas administrativas, 2 memoriais).</li>
@@ -261,14 +256,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- CENÁRIO DA EQUIPE (GERAL CONTA) -->
-                <div class="bg-slate-50 p-4 rounded-xl flex flex-wrap gap-x-6 gap-y-3 text-sm text-gray-600 border border-slate-200 mt-4">
-                    <p><i class="fa-solid fa-user-check text-green-500 mr-2"></i><strong>Turnover:</strong> Não houve.</p>
-                    <p><i class="fa-solid fa-calendar-check text-green-500 mr-2"></i><strong>Pendências de Pauta:</strong> Não há.</p>
-                    <p><i class="fa-solid fa-graduation-cap text-blue-500 mr-2"></i><strong>Treinamento de Novatos:</strong> N/A.</p>
-                </div>
-
             </div>
         </section>
 
@@ -294,21 +281,21 @@
             </div>
 
             <div class="max-w-7xl mx-auto px-4 py-8 space-y-8">
-                
-                <div class="bg-white rounded-2xl shadow-sm p-6 mb-8 flex flex-col md:flex-row justify-between items-center border-l-4 border-purple-600 gap-4">
-                    <div>
-                        <p class="text-sm text-gray-500 uppercase font-bold">Base Ativa</p>
-                        <p class="text-4xl font-bold text-gray-800">210 <span class="text-sm text-gray-400 font-normal">processos totais</span></p>
-                        <p class="text-xs text-gray-500 mt-2"><strong>Distribuição Regional:</strong> Nordeste: 123, Sudeste: 59, Norte: 28.</p>
-                        <p class="text-xs text-gray-500"><strong>Maiores objetos:</strong> Customer Security, Investimentos e Fraud.</p>
-                    </div>
-                    <div class="text-xs text-gray-400 max-w-sm bg-gray-50 p-3 rounded">
-                        2 Acre, 4 Alagoas, 5 Amazonas, 41 Bahia, 17 Ceará, 5 Espírito Santo, 9 Maranhão, 12 Minas Gerais, 16 Pará, 8 Paraíba, 22 Pernambuco, 9 Piauí, 15 Rio de Janeiro, 9 Rio Grande do Norte, 1 Rondônia, 4 Sergipe, 27 São Paulo, 4 Tocantins.
-                    </div>
-                </div>
 
                 <!-- NUBANK MARÇO CONTENT -->
                 <div id="nubank-mar" class="sub-content hidden space-y-8">
+                    <div class="bg-white rounded-2xl shadow-sm p-6 flex flex-col md:flex-row justify-between items-center border-l-4 border-purple-600 gap-4">
+                        <div>
+                            <p class="text-sm text-gray-500 uppercase font-bold">Base Ativa (Março)</p>
+                            <p class="text-4xl font-bold text-gray-800">199 <span class="text-sm text-gray-400 font-normal">processos totais</span></p>
+                            <p class="text-xs text-gray-500 mt-2"><strong>Distribuição Regional:</strong> Nordeste: 128, Sudeste: 53, Norte: 28.</p>
+                            <p class="text-xs text-gray-500"><strong>Maiores objetos:</strong> Customer Security, Investimentos e Fraud.</p>
+                        </div>
+                        <div class="text-[10px] text-gray-400 max-w-sm bg-gray-50 p-3 rounded">
+                            2 Acre, 4 Alagoas, 5 Amazonas, 36 Bahia, 17 Ceará, 4 Espírito Santo, 9 Maranhão, 10 Minas Gerais, 16 Pará, 8 Paraíba, 22 Pernambuco, 9 Piauí, 15 Rio de Janeiro, 9 Rio Grande do Norte, 1 Rondônia, 4 Sergipe, 24 São Paulo, 4 Tocantins.
+                        </div>
+                    </div>
+
                     <div class="bg-white p-6 rounded-2xl shadow-sm border border-purple-100">
                         <h3 class="font-bold text-lg mb-4 text-gray-800">Dados Operacionais - Março</h3>
                         <div class="grid grid-cols-2 gap-4 text-sm mb-4">
@@ -322,7 +309,7 @@
                             <p><strong>Sustentação:</strong> 2 SO e 1 despacho.</p>
                         </div>
                         <div class="mt-4 pt-4 border-t border-gray-100 text-sm">
-                            <p class="font-bold text-gray-800 mb-2">Produtividade da Equipe:</p>
+                            <p class="font-bold text-gray-800 mb-2">Produtividade no Cliente:</p>
                             <p><strong>GHA:</strong> 16 comp. | 38 prazos (22 cont., 2 proc., 2 emb., 1 manif., 9 contrar., 1 imp., 1 contraminuta).</p>
                             <p><strong>MBBE:</strong> 32 prazos.</p>
                         </div>
@@ -331,6 +318,18 @@
 
                 <!-- NUBANK ABRIL CONTENT -->
                 <div id="nubank-abr" class="sub-content space-y-8">
+                    <div class="bg-white rounded-2xl shadow-sm p-6 flex flex-col md:flex-row justify-between items-center border-l-4 border-purple-600 gap-4">
+                        <div>
+                            <p class="text-sm text-gray-500 uppercase font-bold">Base Ativa (Abril)</p>
+                            <p class="text-4xl font-bold text-gray-800">210 <span class="text-sm text-gray-400 font-normal">processos totais</span></p>
+                            <p class="text-xs text-gray-500 mt-2"><strong>Distribuição Regional:</strong> Nordeste: 123, Sudeste: 59, Norte: 28.</p>
+                            <p class="text-xs text-gray-500"><strong>Maiores objetos:</strong> Customer Security, Investimentos e Fraud.</p>
+                        </div>
+                        <div class="text-[10px] text-gray-400 max-w-sm bg-gray-50 p-3 rounded">
+                            2 Acre, 4 Alagoas, 5 Amazonas, 41 Bahia, 17 Ceará, 5 Espírito Santo, 9 Maranhão, 12 Minas Gerais, 16 Pará, 8 Paraíba, 22 Pernambuco, 9 Piauí, 15 Rio de Janeiro, 9 Rio Grande do Norte, 1 Rondônia, 4 Sergipe, 27 São Paulo, 4 Tocantins.
+                        </div>
+                    </div>
+
                     <div class="bg-white p-6 rounded-2xl shadow-sm border border-purple-100">
                         <h3 class="font-bold text-lg mb-4 text-gray-800">Dados Operacionais - Abril</h3>
                         <div class="grid grid-cols-2 gap-4 text-sm mb-4">
@@ -344,22 +343,13 @@
                             <p><strong>Sustentação:</strong> 1 SO e 3 despachos.</p>
                         </div>
                         <div class="mt-4 pt-4 border-t border-gray-100 text-sm">
-                            <p class="font-bold text-gray-800 mb-2">Produtividade da Equipe:</p>
+                            <p class="font-bold text-gray-800 mb-2">Produtividade no Cliente:</p>
                             <p><strong>GHA:</strong> 34 comp. | 28 prazos (15 cont., 2 juntar proc., 5 manif., 6 contrarrazões).</p>
                             <p><strong>MBBE:</strong> 19 prazos.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- CENÁRIO DA EQUIPE & EXTRAS -->
-                <div class="bg-slate-50 p-4 rounded-xl flex flex-wrap gap-x-6 gap-y-3 text-sm text-gray-600 border border-slate-200 mt-8">
-                    <p><i class="fa-solid fa-ban text-gray-400 mr-2"></i><strong>Acordos no Bimestre:</strong> Não houve.</p>
-                    <p><i class="fa-solid fa-video-slash text-gray-400 mr-2"></i><strong>Reunião/Relatórios/Audiências:</strong> N/A.</p>
-                    <div class="w-full h-px bg-gray-200 my-1"></div>
-                    <p><i class="fa-solid fa-user-check text-green-500 mr-2"></i><strong>Turnover:</strong> Não houve.</p>
-                    <p><i class="fa-solid fa-calendar-check text-green-500 mr-2"></i><strong>Pendências de Pauta:</strong> Não há.</p>
-                    <p><i class="fa-solid fa-graduation-cap text-blue-500 mr-2"></i><strong>Treinamento:</strong> N/A.</p>
-                </div>
             </div>
         </section>
 
@@ -444,7 +434,7 @@
                             </ul>
                         </div>
                         <div class="bg-white p-6 rounded-2xl shadow-sm relative border border-gray-100">
-                            <h3 class="font-bold text-lg mb-4 text-gray-800">Operação da Equipe - Março</h3>
+                            <h3 class="font-bold text-lg mb-4 text-gray-800">Operação no Cliente - Março</h3>
                             <div class="space-y-4">
                                 <div class="text-sm">
                                     <p class="font-bold text-gray-700 border-b pb-1 mb-2">Produtividade</p>
@@ -474,7 +464,7 @@
                             </ul>
                         </div>
                         <div class="bg-white p-6 rounded-2xl shadow-sm relative border border-gray-100">
-                            <h3 class="font-bold text-lg mb-4 text-gray-800">Operação da Equipe - Abril</h3>
+                            <h3 class="font-bold text-lg mb-4 text-gray-800">Operação no Cliente - Abril</h3>
                             <div class="space-y-4">
                                 <div class="text-sm">
                                     <p class="font-bold text-gray-700 border-b pb-1 mb-2">Produtividade</p>
@@ -489,13 +479,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- CENÁRIO DA EQUIPE (GERAL CONTA) -->
-                <div class="bg-slate-50 p-4 rounded-xl flex flex-wrap gap-x-6 gap-y-3 text-sm text-gray-600 border border-slate-200 mt-4">
-                    <p><i class="fa-solid fa-user-check text-green-500 mr-2"></i><strong>Turnover:</strong> Não houve.</p>
-                    <p><i class="fa-solid fa-calendar-check text-green-500 mr-2"></i><strong>Pendências de Pauta:</strong> Não há.</p>
-                    <p><i class="fa-solid fa-graduation-cap text-blue-500 mr-2"></i><strong>Treinamento de Novatos:</strong> N/A.</p>
                 </div>
 
             </div>
@@ -523,15 +506,6 @@
             </div>
 
             <div class="max-w-7xl mx-auto px-4 py-8 space-y-8">
-                
-                <!-- ALERTA CRÍTICO DE NEGÓCIO -->
-                <div class="bg-red-50 border-l-4 border-red-600 p-4 rounded shadow-sm flex items-start gap-4">
-                    <i class="fa-solid fa-triangle-exclamation text-red-600 text-2xl mt-1"></i>
-                    <div>
-                        <h3 class="font-bold text-red-800">Notificação Crítica de Conta (Abril)</h3>
-                        <p class="text-sm text-red-700 mt-1"><strong>O cliente anunciou a rescisão com o escritório no final de abril.</strong> Adicionalmente, em abril houve ocorrência de revelia em razão de falha da área técnica ao não encaminhar o processo para cadastro (Ciência tardia. Acordo formalizado).</p>
-                    </div>
-                </div>
 
                 <div class="grid md:grid-cols-4 gap-6">
                     <div class="bg-white p-5 rounded-2xl shadow-sm border-b-4 border-sky-600 text-center"><p class="text-xs text-gray-500 uppercase">Base Ativa</p><p class="text-3xl font-bold mt-1 text-sky-800">130</p></div>
@@ -576,7 +550,7 @@
                                 </ul>
                             </div>
                             <div class="bg-sky-50 p-4 rounded">
-                                <p class="font-bold text-gray-800 mb-2">Produtividade da Equipe</p>
+                                <p class="font-bold text-gray-800 mb-2">Produtividade no Cliente</p>
                                 <p><strong>GIAB (Giovanna):</strong> 35 comp. | 10 prazos (2 cont., 1 proc., 4 def. adm., 3 manif.)</p>
                             </div>
                         </div>
@@ -589,16 +563,16 @@
                         <h3 class="font-bold text-sky-700 mb-3 border-b pb-2">Resumo Operacional - Abril</h3>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
                             <div>
-                                <ul class="space-y-2 text-gray-600">
+                                <ul class="space-y-3 text-gray-600">
                                     <li><strong>Entradas:</strong> 17 (15 PE, 1 AL, 1 PB).</li>
                                     <li><strong>Encerrados:</strong> 1 (favorável).</li>
                                     <li><strong>Decisões:</strong> Não houve.</li>
-                                    <li><strong>Relatórios:</strong> Pauta de Audiências, Base Ativa.</li>
-                                    <li><strong>Acordos:</strong> Recebidos 4 casos (1 form. pós-sentença).</li>
+                                    <li><strong>Relatórios e Acordos:</strong> Pauta de Audiências, Base Ativa. Recebidos 4 casos (1 form. pós-sentença).</li>
+                                    <li class="bg-yellow-50 p-2 rounded border border-yellow-200"><strong>Prejuízos e Alertas:</strong> Ocorrência de revelia em razão de falha da área técnica ao não encaminhar o processo para cadastro em 2025 (Ciência tardia. Acordo formalizado). Cliente anunciou a rescisão com o escritório no final de abril.</li>
                                 </ul>
                             </div>
                             <div class="bg-sky-50 p-4 rounded">
-                                <p class="font-bold text-gray-800 mb-2">Produtividade da Equipe</p>
+                                <p class="font-bold text-gray-800 mb-2">Produtividade no Cliente</p>
                                 <p class="mb-2"><strong>GIAB (Giovanna):</strong> 35 comp. | 17 prazos (4 cont., 5 proc., 7 def. adm., 1 manif.)</p>
                                 <p><strong>LJF (Leonardo):</strong> 5 compromissos | 8 prazos.</p>
                             </div>
@@ -606,11 +580,96 @@
                     </div>
                 </div>
 
-                <!-- CENÁRIO DA EQUIPE (GERAL CONTA) -->
-                <div class="bg-slate-50 p-4 rounded-xl flex flex-wrap gap-x-6 gap-y-3 text-sm text-gray-600 border border-slate-200 mt-4">
-                    <p><i class="fa-solid fa-user-check text-green-500 mr-2"></i><strong>Turnover:</strong> Não houve.</p>
-                    <p><i class="fa-solid fa-calendar-check text-green-500 mr-2"></i><strong>Pendências de Pauta:</strong> Não há.</p>
-                    <p><i class="fa-solid fa-graduation-cap text-blue-500 mr-2"></i><strong>Treinamento de Novatos:</strong> N/A.</p>
+            </div>
+        </section>
+
+        <!-- SECÇÃO: EQUIPE (PRODUTIVIDADE CONSOLIDADA) -->
+        <section id="equipe" class="content-section">
+            <div class="bg-yellow-500 text-slate-900 py-16">
+                <div class="max-w-7xl mx-auto px-4">
+                    <h2 class="text-4xl font-bold mb-2">Produtividade Consolidada</h2>
+                    <p class="text-yellow-900 font-semibold">Resumo da performance da equipe no bimestre (Março/Abril)</p>
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 py-12 space-y-8">
+                
+                <h3 class="text-2xl font-bold text-slate-800 border-l-4 border-yellow-400 pl-4 mb-6">Detalhamento por Advogado Principal</h3>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- GABRIEL (GHA) -->
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                        <div class="bg-slate-800 text-white p-4 flex justify-between items-center">
+                            <h4 class="font-bold text-lg"><i class="fa-solid fa-user-tie mr-2 text-blue-400"></i> GHA (Gabriel)</h4>
+                            <div class="text-right">
+                                <p class="text-sm font-bold text-yellow-400">Total Bimestre</p>
+                                <p class="text-xs">137 Compromissos | 124 Prazos</p>
+                            </div>
+                        </div>
+                        <div class="p-6 text-sm text-gray-700 space-y-4">
+                            <div class="bg-blue-50 p-3 rounded">
+                                <p class="font-bold text-blue-800 border-b border-blue-200 pb-1 mb-2">Cliente: MOVA (87 Comp | 58 Prazos)</p>
+                                <p class="mb-1"><strong>Março:</strong> 49 compromissos | 32 prazos</p>
+                                <p><strong>Abril:</strong> 38 compromissos | 26 prazos</p>
+                            </div>
+                            <div class="bg-purple-50 p-3 rounded">
+                                <p class="font-bold text-purple-800 border-b border-purple-200 pb-1 mb-2">Cliente: Nubank (50 Comp | 66 Prazos)</p>
+                                <p class="mb-1"><strong>Março:</strong> 16 compromissos | 38 prazos</p>
+                                <p><strong>Abril:</strong> 34 compromissos | 28 prazos</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- GIOVANNA (GIAB) -->
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                        <div class="bg-slate-800 text-white p-4 flex justify-between items-center">
+                            <h4 class="font-bold text-lg"><i class="fa-solid fa-user-tie mr-2 text-red-400"></i> GIAB (Giovanna)</h4>
+                            <div class="text-right">
+                                <p class="text-sm font-bold text-yellow-400">Total Bimestre</p>
+                                <p class="text-xs">148 Compromissos | 31 Prazos</p>
+                            </div>
+                        </div>
+                        <div class="p-6 text-sm text-gray-700 space-y-4">
+                            <div class="bg-red-50 p-3 rounded">
+                                <p class="font-bold text-red-800 border-b border-red-200 pb-1 mb-2">Cliente: 3 Corações (78 Comp | 4 Prazos)</p>
+                                <p class="mb-1"><strong>Março:</strong> 30 compromissos | 2 prazos</p>
+                                <p><strong>Abril:</strong> 48 compromissos | 2 prazos</p>
+                            </div>
+                            <div class="bg-sky-50 p-3 rounded">
+                                <p class="font-bold text-sky-800 border-b border-sky-200 pb-1 mb-2">Cliente: Ortobom (70 Comp | 27 Prazos)</p>
+                                <p class="mb-1"><strong>Março:</strong> 35 compromissos | 10 prazos</p>
+                                <p><strong>Abril:</strong> 35 compromissos | 17 prazos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-bold text-slate-800 border-l-4 border-slate-400 pl-4 mt-12 mb-6">Demais Integrantes da Equipe</h3>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100">
+                        <h4 class="font-bold text-slate-800 mb-2">JAJS (Jaqueline)</h4>
+                        <p class="text-sm text-gray-600">Atuação: MOVA</p>
+                        <p class="text-sm font-bold text-slate-700 mt-2">Total: 95 Comp | 69 Prazos</p>
+                        <p class="text-xs text-gray-500 mt-1">Mar: 54c / 40p<br>Abr: 41c / 29p</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100">
+                        <h4 class="font-bold text-slate-800 mb-2">MBBE (Marina)</h4>
+                        <p class="text-sm text-gray-600">Atuação: MOVA e Nubank</p>
+                        <p class="text-sm font-bold text-slate-700 mt-2">Total: 83 Prazos</p>
+                        <p class="text-xs text-gray-500 mt-1">MOVA: 32p (Mar+Abr)<br>Nubank: 51p (Mar+Abr)</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-4">
+                        <div>
+                            <h4 class="font-bold text-slate-800 mb-1">LMSI (Lorena)</h4>
+                            <p class="text-sm font-bold text-slate-700">Total: 24 Prazos (MOVA)</p>
+                        </div>
+                        <div class="border-t border-gray-100 pt-3">
+                            <h4 class="font-bold text-slate-800 mb-1">LJF (Leonardo)</h4>
+                            <p class="text-sm font-bold text-slate-700">Total: 5 Comp | 8 Prazos</p>
+                            <p class="text-xs text-gray-500 mt-1">(Suporte Ortobom Abril)</p>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -640,14 +699,17 @@
 
             // Atualiza os estilos das abas de navegação no cabeçalho
             document.querySelectorAll('.nav-btn').forEach(btn => {
-                btn.classList.remove('tab-active');
+                btn.classList.remove('tab-active', 'text-yellow-300'); // Clean special colors if needed
             });
             const activeBtn = document.getElementById('btn-' + sectionId);
             if (activeBtn) {
                 activeBtn.classList.add('tab-active');
+                if (sectionId === 'equipe') {
+                    activeBtn.classList.add('text-yellow-300');
+                }
             }
 
-            // Rola suavemente para o topo ao trocar de cliente
+            // Rola suavemente para o topo ao trocar de cliente/aba
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
